@@ -1,0 +1,42 @@
+{
+  "organisation": {
+    "name": "Automation",
+    "users": {
+      "poweruser": {
+        "username": "senate.tester+poweruser@gmail.com",
+        "password": "Data@123"
+      },
+      "normaluser": {
+        "username": "senate.tester+normaluser@gmail.com",
+        "password": "Data@123"
+      },
+      "datauser": {
+        "username": "senate.tester+normaluser@gmail.com",
+        "password": "Data@123"
+      },
+      "packageuser": {
+        "username": "laxmane@adaps.com.au",
+        "password": "Data@123"
+      },
+      "licenceuser": {
+        "username": "senate.tester+licensee@gmail.com",
+        "password": "Data@123"
+      },
+      "drapprover": {
+        "username": "senate.tester+dradmin@gmail.com",
+        "password": "Data@123"
+      },
+      "licensee": {
+        "username": "manoujitha+neworg@datarepublic.com",
+        "password": "12345678"
+      },
+      "DRAdmin": {
+        "username": "manoujitha+dr@datarepublic.com",
+        "password": "12345678"
+      }
+    },
+    "database": {
+      "id": "randomstring"
+    }
+  }
+}

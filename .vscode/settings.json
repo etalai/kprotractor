@@ -1,0 +1,30 @@
+{
+  // Editor
+  "editor.formatOnType": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.insertSpaces": true,
+  "editor.minimap.enabled": true,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  // Files
+  "files.trimTrailingWhitespace": true,
+  // HTML-Hint
+  "htmlhint.enable": true,
+  "htmlhint.options": {},
+  // Search
+  "search.exclude": {
+    "coverage": true,
+    "dist": true,
+    "documentation": true
+  },
+  // TSLint
+  "tslint.autoFixOnSave": true,
+  // TypeScript Hero
+  "typescriptHero.imports.multiLineTrailingComma": false,
+  "typescriptHero.imports.disableImportsSorting": false,
+  "typescriptHero.imports.organizeOnSave": true,
+  // VS icons
+  "vsicons.presets.angular": true,
+  "typescript.tsdk": "node_modules/typescript/lib"
+}
