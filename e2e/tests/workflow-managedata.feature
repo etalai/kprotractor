@@ -1,4 +1,4 @@
-@WorkflowTests @refactor
+@WorkflowTests
 Feature: Manage Data Work flow
 As senate data user
 I should be able to access manage data

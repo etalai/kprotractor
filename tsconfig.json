@@ -1,34 +1,18 @@
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "outDir": "./dist/out-tsc",
-    "sourceMap": true,
-    "declaration": false,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "target": "es5",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2017",
-      "dom"
-    ],
-    "plugins": [
-      {
-        "name": "tslint-language-service"
-      }
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es6",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "declaration": false,
+        "removeComments": false,
+        "noImplicitAny": false,
+        "outDir": "typeScript",
+        "typeRoots": [ "./node_modules/@types" ],
+        "types": ["node","cucumber"]
+    },
+    "exclude": [
+        "node_modules",
+        "typescript"
     ]
-  },
-  "include": [
-    "src/**/*.ts",
-    "node_modules/@ngrx/notify/lib/*",
-    "node_modules/ngx-clipboard/src/index.ts",
-    "node_modules/ngx-clipboard/src/clipboard.directive.ts",
-    "node_modules/ngx-clipboard/src/clipboard.service.ts",
-    "node_modules/ng2letteravatar/ng2letteravatar.ts",
-    "node_modules/angular2-autosize/src/autosize.directive.ts",
-    "node_modules/ng-socket-io/socket-io.module.ts"
-  ]
 }
