@@ -1,10 +1,11 @@
 Feature: As a senate user, I should be able to login to and logout of the senate platform
-  @loginTest @refactor
+  @loginTest 
   Scenario: As a senate user, I should be able to login to the senate platform
-    Given I have  entered the 'valid-username' and 'valid-password'
+    Given I have entered the 'valid-username' and 'valid-password'
     And I click login button
-  #Then I am redirected to the homepage
+#Then I am redirected to the homepage
 
+ @refactor
   Scenario: As a user who has no valid credentials, I should not be able to login to the senate platform
     Given I have entered the 'invalid-username' and 'invalid-password'
     And I click login button
@@ -12,7 +13,7 @@ Feature: As a senate user, I should be able to login to and logout of the senate
     And I see the 'The username/password combination is invalid.' error message
     And I am redirected to the loginPage
 
-
+  @refactor
   Scenario: As a user who has valid user name and invalid password, I should not be able to login to the senate platform
     Given I have entered the 'valid-username' and 'invalid-password'
     When I click login button
@@ -20,7 +21,7 @@ Feature: As a senate user, I should be able to login to and logout of the senate
     And I see the 'The username/password combination is invalid.' error message
     And I am redirected to the loginPage
 
-
+  @refactor
   Scenario: As a user who has a invalid username and a valid password, I should not be able to login to the senate platform
     Given I have entered the 'invalid-username' and 'valid-password'
     When I click login button
@@ -28,11 +29,12 @@ Feature: As a senate user, I should be able to login to and logout of the senate
     And I see the 'The username/password combination is invalid.' error message
     And I am redirected to the loginPage
 
+  @refactor
   Scenario: As a logged in user, I should be able to logout of senate platform
     Given I have entered the 'valid-username' and 'valid-password'
     And I click login button
-    Then I am redirected to the home page
-    And I click the 'Logout' button
-    And I am redirected to the loginPage
+#   Then I am redirected to the homepage
+#And I click the 'Logout' button
+#And I am redirected to the loginPage
 
 

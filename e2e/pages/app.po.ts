@@ -1,6 +1,7 @@
 import { browser, by, element, promise, protractor } from 'protractor';
+import { BasePage } from './base.po';
 
-export class AppPage {
+export class AppPage extends BasePage{
   navigateTo(): promise.Promise<any> {
     browser.waitForAngularEnabled(false);
 
@@ -20,6 +21,16 @@ export class AppPage {
     return browser.wait(until.not(until.presenceOf(element(by.css('.loading')))), 20000);
   }
 
+  waitForPageLoad(): promise.Promise<any> {
+    // wait for manage page to load
+
+    return  browser.wait(async () => {
+      return (await browser.driver.findElements(by.id('idToken1'))).length > 0;
+    }, 120 * 1000, 'Senate should be redirected to the login page within 120 sec');
+
+
+  }
+
   loginToSenate(username, password): promise.Promise<any> {
     const deferred = protractor.promise.defer();
     const until = protractor.ExpectedConditions;
@@ -37,10 +48,12 @@ export class AppPage {
     });
 
     // wait for login page to load
+    this.waitForPageLoad();
 
     browser.wait(async () => {
       return (await browser.driver.findElements(by.id('idToken1'))).length > 0;
-    }, 20 * 1000, 'Senate should be redirected to the login page within 20 sec');
+    }, 40 * 1000, 'Senate should be redirected to the login page within 40 sec');
+
     element(by.id('idToken1')).sendKeys(username);
     element(by.id('idToken2')).sendKeys(password);
     element(by.id('loginButton_0')).click();

@@ -40,6 +40,7 @@
     "protractor-cucumber-framework": "^5.0.0",
     "rimraf": "^2.6.2",
     "ts-node": "^6.0.0",
-    "typescript": "^2.8.1"
+    "typescript": "^2.8.1",
+    "protractor-multiple-cucumber-html-reporter-plugin": "^1.7.0"
   }
 }

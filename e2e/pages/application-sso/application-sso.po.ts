@@ -1,18 +1,19 @@
 import { browser, by, element, promise, protractor } from 'protractor';
 
-import { CommonPage } from '../common.po';
 
-export class ApplicationSSOPage {
-    common: CommonPage = new CommonPage();
+import { BasePage } from '../base.po';
+
+export class ApplicationSSOPage extends BasePage {
+    //common: CommonPage = new CommonPage();
     until = protractor.ExpectedConditions;
 
     fillInLoginCredentials(username, password): promise.Promise<any> {
         browser.wait(async () => {
             return (await browser.driver.findElements(by.id('idToken1'))).length > 0;
-        }, 10 * 1000, 'Senate should be redirected to the login page within 10 sec');
-        this.common.fillFields('#idToken1', username);
+        }, 100 * 1000, 'Senate should be redirected to the login page within 100 sec');
+        this.fillFields('#idToken1', username);
 
-        return this.common.fillFields('#idToken2', password);
+        return this.fillFields('#idToken2', password);
     }
 
     clickLoginButton(): promise.Promise<any> {

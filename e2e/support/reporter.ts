@@ -10,7 +10,7 @@ const cucumberReporterOptions = {
     jsonFile: targetJson,
     output: htmlReports + "/cucumber_reporter.html",
     reportSuiteAsScenarios: true,
-    theme: "bootstrap",
+    theme: "hierarchy",
 };
 
 export class Reporter {
