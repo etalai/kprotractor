@@ -7,7 +7,7 @@ So that I can upload file, create data base to share the data
   Scenario:Upload a file
     Given 'normaluser' is logged in
     When I navigate to 'Manage Data' page
-    And I add a new file '../../../../e2e/testdata/test_data.csv'
+    And I add a new file '../../testdata/test_data.csv'
     Then new file should be uploaded
   @refactor
   Scenario: Create a database

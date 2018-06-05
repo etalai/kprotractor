@@ -50,16 +50,12 @@ export class AppPage extends BasePage{
     // wait for login page to load
     this.waitForPageLoad();
 
-    browser.wait(async () => {
-      return (await browser.driver.findElements(by.id('idToken1'))).length > 0;
-    }, 40 * 1000, 'Senate should be redirected to the login page within 40 sec');
-
     element(by.id('idToken1')).sendKeys(username);
     element(by.id('idToken2')).sendKeys(password);
     element(by.id('loginButton_0')).click();
 
     browser.wait(until.presenceOf(element(by.css('dr-layout-toolbar-header i.senate-profile'))),
-      50 * 1000, 'After login senate should be redirected to the home page within 50 sec').then(() => {
+      120 * 1000, 'After login senate should be redirected to the home page within 120 sec').then(() => {
         deferred.fulfill('Login successful');
       }, () => {
         deferred.reject('After login senate should be redirected to the home page within 25 sec');

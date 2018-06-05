@@ -1,13 +1,12 @@
 {
   "name": "kprotractor",
-  "version": "3.0.0",
-  "license": "MIT",
+  "version": "1.0.0",
   "description": "To demostrate protractor cucumber tests for angular/non angular apps with allure report framework",
 
   "keywords": [
     "protractor",
     "cucumber",
-    "typescript",
+    "./dist/out-tsc",
     "angular",
     "angularjs",
     "testing",
@@ -21,9 +20,9 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "clean": "rimraf typeScript/",
+    "clean": "rimraf ./dist/out-tsc/",
     "clean-build": "npm run clean && npm run build",
-    "test": "protractor typeScript/config.js",
+    "test": "protractor protractor-cucumber.conf.js",
     "webdriver-update": "webdriver-manager update",
     "webdriver-start": "webdriver-manager start"
   },

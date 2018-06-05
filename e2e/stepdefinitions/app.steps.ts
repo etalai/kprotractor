@@ -7,7 +7,7 @@ import { AppPage } from '../pages/app.po';
 
 let app: AppPage;
 // tslint:disable-next-line:no-require-imports
-const testdataconfig = require('../../../e2e/testdata/e2e.test.config.json');
+const testdataconfig = require('../testdata/e2e.test.config.json');
 
 Before(() => {
   app = new AppPage();

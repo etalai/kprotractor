@@ -41,7 +41,7 @@ export const config: Config = {
     cucumberOpts: {
         compiler: [],
         format: "json:./reports/json/cucumber_report.json",
-        require: ["../typeScript/e2e/stepdefinitions/**/*.js", "../typeScript/e2e/support/*.js"],
+        require: ['../e2e/**/*.steps.ts','../e2e/support/*.ts'],
         strict: true,
         tags: "@refactor",
     },
