@@ -1,12 +1,11 @@
 {
   "name": "kprotractor",
   "version": "1.0.0",
-  "description": "To demostrate protractor cucumber tests for angular/non angular apps with allure report framework",
-
+  "description": "protractor cucumber typescript jasimine chai for angular/non angular apps with protractor-multiple-cucumber-html framework",
   "keywords": [
     "protractor",
     "cucumber",
-    "./dist/out-tsc",
+    "chai",
     "angular",
     "angularjs",
     "testing",

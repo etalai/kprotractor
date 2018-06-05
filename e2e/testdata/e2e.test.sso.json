@@ -1,13 +1,13 @@
 {
   "credentials": {
-    "valid-username": "manoujitha+1@datarepublic.com",
-    "invalid-username": "abc@gmail.com",
+    "valid-username": "valid-username@valid-username.com",
+    "invalid-username": "invalid@gmail.com",
     "valid-password": "12345678",
     "invalid-password": "11111111",
-    "valid-display-name": "Manoujitha"
+    "valid-display-name": "valid-display-name"
   },
   "urls": {
-    "home-page-url": "https://app.qa.datarepublic.com.au/getting-started",
-    "login-page-url": "https://sso.qa.datarepublic.com.au"
+    "home-page-url": "https://home-page-url.com.au/",
+    "login-page-url": "https://login-page-url.com.au"
   }
 }
