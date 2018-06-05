@@ -11,8 +11,8 @@ export const config: Config = {
     useAllAngular2AppRoots: true,
     //SELENIUM_PROMISE_MANAGER: false,
 
-    baseUrl: "https://app.qa.datarepublic.com.au",//"https://www.google.com",
 
+    baseUrl: "https://www.google.com",
     capabilities: {
         browserName: "chrome",
         'chromeOptions': {
