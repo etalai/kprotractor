@@ -12,7 +12,7 @@ export const config: Config = {
     //SELENIUM_PROMISE_MANAGER: false,
 
 
-    baseUrl: "https://www.google.com",
+    baseUrl: env_config.app_url,
     capabilities: {
         browserName: "chrome",
         'chromeOptions': {
