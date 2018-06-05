@@ -6,13 +6,18 @@ const jsonReports = process.cwd() + "/reports/json";
 export const config: Config = {
 
     seleniumAddress: "http://127.0.0.1:4444/wd/hub",
+    allScriptsTimeout: 60000,
+    rootElement: 'dr-root',
+    useAllAngular2AppRoots: true,
+    //SELENIUM_PROMISE_MANAGER: false,
 
-    SELENIUM_PROMISE_MANAGER: false,
-
-    baseUrl: "https://www.google.com",
+    baseUrl: "https://app.qa.datarepublic.com.au",//"https://www.google.com",
 
     capabilities: {
         browserName: "chrome",
+        'chromeOptions': {
+            'args': ['no-sandbox', 'disable-gpu']
+          }
     },
 
     framework: "custom",
@@ -21,7 +26,12 @@ export const config: Config = {
     specs: [
         "../e2e/features/*.feature",
     ],
-
+    beforeLaunch: function () {
+        require('ts-node')
+          .register({
+            project: 'e2e/tsconfig.e2e.json'
+          });
+      },
     onPrepare: () => {
         browser.ignoreSynchronization = true;
         browser.manage().window().maximize();
@@ -29,13 +39,20 @@ export const config: Config = {
     },
 
     cucumberOpts: {
-        compiler: "ts:ts-node/register",
+        compiler: [],
         format: "json:./reports/json/cucumber_report.json",
-        require: ["../typeScript/e2e/stepdefinitions/*.js", "../typeScript/e2e/support/*.js"],
+        require: ['../e2e/**/*.steps.ts','../e2e/support/*.ts'],
         strict: true,
-        tags: "@OutlineScenario",
+        tags: "@refactor",
     },
-
+    plugins: [{
+        package: 'protractor-multiple-cucumber-html-reporter-plugin',
+        options: {
+          // read the options part
+          automaticallyGenerateReport: true,
+          removeExistingJsonReportFile: true
+        }
+      }],
     onComplete: () => {
         Reporter.createHTMLReport();
     },

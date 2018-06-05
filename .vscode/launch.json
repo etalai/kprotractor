@@ -12,7 +12,7 @@
             "program": "${workspaceRoot}/node_modules/protractor/bin/protractor",
             "preLaunchTask": "tsc: build - tsconfig.json",
             "args": [
-                "${workspaceRoot}/typeScript/config/config.js"
+                "${workspaceRoot}/./dist/out-tsc/config.js"
               ]
         }
     ]

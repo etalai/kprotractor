@@ -1,0 +1,20 @@
+{
+  "app_url": "https://app.qa.thyxkris.com.au",
+  "communication_url": "https://comms.dev.thyxkris.com.au",
+  "communication_websocket_url": "wss://comms.dev.thyxkris.com.au/websocket",
+  "data_url": "https://a.dev.thyxkris.com.au",
+  "events_websocket_url": "ws://local.dev.thyxkris.com.au:8700",
+  "api_gateway_url": "http://local.dev.thyxkris.com.au:3000",
+  "feedback_env": "",
+  "feedback_token": "",
+  "file_url": "https://k.dev.thyxkris.com.au/gateway/default/webhdfs/v1",
+  "gateway_url": "https://k.dev.thyxkris.com.au/gateway/default/templeton/v1/ddl",
+  "identity_url": "https://a.dev.thyxkris.com.au/identity/v3",
+  "self_url": "https://a.dev.thyxkris.com.au/self/v1",
+  "senate_url": "https://senate.dev.thyxkris.com.au",
+  "sso_url": "https://ssoam",
+  "stack_url": "https://a.dev.thyxkris.com.au/stack/v2",
+  "validator_url": "https://a.dev.thyxkris.com.au/validator/v1",
+  "web_dsw_url": "https://web-dsw.dev.thyxkris.com.au/dsw/#/",
+  "workflow_url": "https://workflow1.dev.thyxkris.com.au/app"
+}

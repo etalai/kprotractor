@@ -1,5 +1,5 @@
 node_modules/
-TypeScript/
+./dist/out-tsc/
 reports/
 *.js
 .vscode
